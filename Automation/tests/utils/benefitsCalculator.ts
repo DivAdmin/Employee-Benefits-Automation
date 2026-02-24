@@ -1,4 +1,3 @@
-// utils/benefitsCalculator.ts
 export interface EmployeeInput {
   dependentsCount: number;
 }

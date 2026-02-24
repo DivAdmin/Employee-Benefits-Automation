@@ -15,7 +15,7 @@ export class LoginPage {
 
   async goto() {
     await this.page.goto(
-      'https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login'
+      'https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login', { waitUntil: 'networkidle' }
     );
   }
 
