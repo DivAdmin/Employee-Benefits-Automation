@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { EmployeeClient } from '../pages/EmployeeClient';
-import { calculateBenefits } from '../pages/Benefits';
+import { EmployeeClient } from '../pages/employee-client-page';
+import { calculateBenefits } from '../utils/benefit-calculationutil-api';
 import { v4 as uuidv4 } from 'uuid';
 
 test.describe('Paylocity Benefits Dashboard API Automation', () => {
