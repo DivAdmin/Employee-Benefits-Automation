@@ -14,7 +14,7 @@ test.describe('Paylocity Benefits Dashboard - Employee management', () => {
     const login = new LoginPage(page);
     dashboard = new BenefitsDashboardPage(page);
     await login.goto();
-    await login.login('TestUser895', 'BozPR{^3)@^m'); 
+    await login.login(process.env.APP_USERNAME as string, process.env.APP_PASSWORD as string); 
     const unique = Date.now(); 
     firstName = `TestFN_${unique}`; 
     lastName = `TestLN_${unique}`;

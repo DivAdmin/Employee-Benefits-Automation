@@ -14,9 +14,13 @@ export class LoginPage {
   }
 
   async goto() {
+    const baseURL= process.env.APP_BASE_URL;
     await this.page.goto(
-      'https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login', { waitUntil: 'networkidle' }
+      baseURL as string, { waitUntil: 'networkidle' }
     );
+    // await this.page.goto(
+    //   'https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login', { waitUntil: 'networkidle' }
+    // );
   }
 
   async login(username: string, password: string) {

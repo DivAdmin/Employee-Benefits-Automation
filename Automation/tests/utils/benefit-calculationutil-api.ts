@@ -1,18 +1,18 @@
 export function calculateBenefits(dependants: number) {
-  const employeeCost = 1000;
-  const dependantCost = dependants * 500;
-  const totalYearlyCost = employeeCost + dependantCost;
+  const employeeBenefit = 1000;
+  const dependantBenefit = dependants * 500;
+  const totalYearlyBenefit = employeeBenefit + dependantBenefit;
 
   const paychecks = 26;
-  const costPerPaycheck = totalYearlyCost / paychecks;
+  const benefitsCost = totalYearlyBenefit / paychecks;
 
-  const gross = 2000;
-  const net = gross - costPerPaycheck;
+  const grossSalary = 2000;
+  const net = grossSalary - benefitsCost;
 
   return {
-    yearlyCost: totalYearlyCost,
-    costPerPaycheck,
-    gross,
+    yearlyCost: totalYearlyBenefit,
+    benefitsCost,
+    grossSalary,
     net,
   };
 }
